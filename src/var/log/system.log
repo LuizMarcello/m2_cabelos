@@ -1,0 +1,128 @@
+[2024-07-01T15:06:37.703231+00:00] main.INFO: Source table payment_services_order_status_data_production_submitted_hash does not exist. Skipping data migration... [] []
+[2024-07-01T15:10:44.967103+00:00] main.ERROR: crontab -l 2>/dev/null 2>&1
+no crontab for app [] []
+[2024-07-01T15:10:44.970181+00:00] main.ERROR: crontab -l 2>/dev/null 2>&1
+no crontab for app [] []
+[2024-07-01T15:10:44.981532+00:00] main.INFO: echo "
+#~ MAGENTO START 69dd2b02e1f3a65918182048ea4e29979a849d8942e8f53ed20a4bf10e529b36
+* * * * * /usr/local/bin/php /var/www/html/bin/magento cron:run 2>&1 | grep -v \"Ran jobs by schedule\" >> /var/www/html/var/log/magento.cron.log
+#~ MAGENTO END 69dd2b02e1f3a65918182048ea4e29979a849d8942e8f53ed20a4bf10e529b36
+" 2>&1 | crontab - 2>&1
+ [] []
+[2024-07-01T15:30:19.985728+00:00] main.INFO: /usr/local/bin/php -f /var/www/html/bin/magento cache:flush 2>&1
+Flushed cache types:
+config
+layout
+block_html
+collections
+reflection
+db_ddl
+compiled_config
+eav
+customer_notification
+config_integration
+config_integration_api
+graphql_query_resolver_result
+full_page
+config_webservice
+translate [] []
+[2024-07-01T15:31:46.451164+00:00] main.INFO: /usr/local/bin/php -f /var/www/html/bin/magento setup:di:compile 2>&1
+Compilation was started.
+%message% 0/9 [>---------------------------]   0% < 1 sec 113.0 MiBProxies code generation... 0/9 [>---------------------------]   0% < 1 sec 113.0 MiB
+Proxies code generation... 1/9 [===>------------------------]  11% 1 sec 117.0 MiB
+Repositories code generation... 1/9 [===>------------------------]  11% 1 sec 117.0 MiB
+Repositories code generation... 2/9 [======>---------------------]  22% 12 secs 238.0 MiB
+Service data attributes generation... 2/9 [======>---------------------]  22% 12 secs 238.0 MiB
+Service data attributes generation... 3/9 [=========>------------------]  33% 12 secs 238.0 MiB
+Application code generator... 3/9 [=========>------------------]  33% 12 secs 238.0 MiB
+Application code generator... 4/9 [============>---------------]  44% 21 secs 262.0 MiB
+Interceptors generation... 4/9 [============>---------------]  44% 21 secs 262.0 MiB
+Interceptors generation... 5/9 [===============>------------]  55% 55 secs 300.0 MiB
+Area configuration aggregation... 5/9 [===============>------------]  55% 55 secs 300.0 MiB
+Area configuration aggregation... 6/9 [==================>---------]  66% 1 min, 2 secs 408.0 MiB
+Interception cache generation... 6/9 [==================>---------]  66% 1 min, 2 secs 408.0 MiB
+Interception cache generation... 7/9 [=====================>------]  77% 1 min, 7 secs 406.0 MiB
+App action list generation... 7/9 [=====================>------]  77% 1 min, 7 secs 406.0 MiB
+App action list generation... 8/9 [========================>---]  88% 1 min, 7 secs 406.0 MiB
+Plugin list generation... 8/9 [========================>---]  88% 1 min, 7 secs 406.0 MiB
+Plugin list generation... 9/9 [============================] 100% 1 min, 11 secs 406.0 MiB
+Generated code and dependency injection configuration successfully. [] []
+[2024-07-01T15:31:48.346824+00:00] main.INFO: /usr/local/bin/php -f /var/www/html/bin/magento cache:flush 2>&1
+Flushed cache types:
+config
+layout
+block_html
+collections
+reflection
+db_ddl
+compiled_config
+eav
+customer_notification
+config_integration
+config_integration_api
+graphql_query_resolver_result
+full_page
+config_webservice
+translate [] []
+[2024-07-01T15:32:28.181546+00:00] main.INFO: /usr/local/bin/php -f /var/www/html/bin/magento setup:static-content:deploy -f en_US 2>&1
+
+Deploy using quick strategy
+frontend/Magento/blank/en_US            0/2267              >--------------------------- 0%     < 1 sec
+[1A[2Kfrontend/Magento/blank/en_US            237/2267            ==>------------------------- 10%    1 sec
+[1A[2Kfrontend/Magento/blank/en_US            801/2267            =========>------------------ 35%    2 secs
+[1A[2Kfrontend/Magento/blank/en_US            1445/2267           =================>---------- 63%    3 secs
+[1A[2Kfrontend/Magento/blank/en_US            2183/2267           ==========================>- 96%    5 secs
+[1A[2Kfrontend/Magento/blank/en_US            2184/2267           ==========================>- 96%    8 secs
+[1A[2Kfrontend/Magento/blank/en_US            2186/2267           ==========================>- 96%    9 secs
+[1A[2Kfrontend/Magento/blank/en_US            2189/2267           ===========================> 96%    10 secs
+[1A[2Kfrontend/Magento/blank/en_US            2267/2267           ============================ 100%   10 secs
+adminhtml/Magento/backend/en_US         237/2921            ==>------------------------- 8%     1 sec
+[1A[2K[1A[2Kfrontend/Magento/blank/en_US            2267/2267           ============================ 100%   10 secs
+adminhtml/Magento/backend/en_US         1277/2921           ============>--------------- 43%    2 secs
+[1A[2K[1A[2Kfrontend/Magento/blank/en_US            2267/2267           ============================ 100%   10 secs
+adminhtml/Magento/backend/en_US         2185/2921           ====================>------- 74%    3 secs
+[1A[2K[1A[2Kfrontend/Magento/blank/en_US            2267/2267           ============================ 100%   10 secs
+adminhtml/Magento/backend/en_US         2770/2921           ==========================>- 94%    5 secs
+[1A[2K[1A[2Kfrontend/Magento/blank/en_US            2267/2267           ============================ 100%   10 secs
+adminhtml/Magento/backend/en_US         2771/2921           ==========================>- 94%    14 secs
+[1A[2K[1A[2Kfrontend/Magento/blank/en_US            2267/2267           ============================ 100%   10 secs
+adminhtml/Magento/backend/en_US         2921/2921           ============================ 100%   14 secs
+frontend/Magento/luma/en_US             262/2283            ===>------------------------ 11%    1 sec
+[1A[2K[1A[2K[1A[2Kfrontend/Magento/blank/en_US            2267/2267           ============================ 100%   10 secs
+adminhtml/Magento/backend/en_US         2921/2921           ============================ 100%   14 secs
+frontend/Magento/luma/en_US             1195/2283           ==============>------------- 52%    2 secs
+[1A[2K[1A[2K[1A[2Kfrontend/Magento/blank/en_US            2267/2267           ============================ 100%   10 secs
+adminhtml/Magento/backend/en_US         2921/2921           ============================ 100%   14 secs
+frontend/Magento/luma/en_US             2183/2283           ==========================>- 95%    4 secs
+[1A[2K[1A[2K[1A[2Kfrontend/Magento/blank/en_US            2267/2267           ============================ 100%   10 secs
+adminhtml/Magento/backend/en_US         2921/2921           ============================ 100%   14 secs
+frontend/Magento/luma/en_US             2184/2283           ==========================>- 95%    9 secs
+[1A[2K[1A[2K[1A[2Kfrontend/Magento/blank/en_US            2267/2267           ============================ 100%   10 secs
+adminhtml/Magento/backend/en_US         2921/2921           ============================ 100%   14 secs
+frontend/Magento/luma/en_US             2186/2283           ==========================>- 95%    10 secs
+[1A[2K[1A[2K[1A[2Kfrontend/Magento/blank/en_US            2267/2267           ============================ 100%   10 secs
+adminhtml/Magento/backend/en_US         2921/2921           ============================ 100%   14 secs
+frontend/Magento/luma/en_US             2189/2283           ==========================>- 95%    11 secs
+[1A[2K[1A[2K[1A[2Kfrontend/Magento/blank/en_US            2267/2267           ============================ 100%   10 secs
+adminhtml/Magento/backend/en_US         2921/2921           ============================ 100%   14 secs
+frontend/Magento/luma/en_US             2283/2283           ============================ 100%   11 secs
+
+Execution time: 38.116900920868 [] []
+[2024-07-01T18:47:26.292992+00:00] main.ERROR: Sample Data error: Warning: file_get_contents(/var/www/html/pub/media/downloadable/files/links/l/u/luma_background_-_model_against_fence_4_sec_.mp4): Failed to open stream: No such file or directory in /var/www/html/vendor/magento/module-downloadable-sample-data/Model/Product/Converter.php on line 132 [] []
+[2024-07-01T18:49:11.026990+00:00] main.CRITICAL: Can not load static content version. [] []
+[2024-07-01T18:49:18.209703+00:00] main.WARNING: Memory size allocated for the temporary table is more than 20% of innodb_buffer_pool_size. Please update innodb_buffer_pool_size or decrease batch size value (which decreases memory usages for the temporary table). Current batch size: 100000; Allocated memory size: 50000000 bytes; InnoDB buffer pool size: 134217728 bytes. [] []
+[2024-07-01T18:49:18.284351+00:00] main.WARNING: Memory size allocated for the temporary table is more than 20% of innodb_buffer_pool_size. Please update innodb_buffer_pool_size or decrease batch size value (which decreases memory usages for the temporary table). Current batch size: 100000; Allocated memory size: 50000000 bytes; InnoDB buffer pool size: 134217728 bytes. [] []
+[2024-07-01T18:49:18.375770+00:00] main.WARNING: Memory size allocated for the temporary table is more than 20% of innodb_buffer_pool_size. Please update innodb_buffer_pool_size or decrease batch size value (which decreases memory usages for the temporary table). Current batch size: 100000; Allocated memory size: 50000000 bytes; InnoDB buffer pool size: 134217728 bytes. [] []
+[2024-07-01T18:49:18.579441+00:00] main.WARNING: Memory size allocated for the temporary table is more than 20% of innodb_buffer_pool_size. Please update innodb_buffer_pool_size or decrease batch size value (which decreases memory usages for the temporary table). Current batch size: 100000; Allocated memory size: 50000000 bytes; InnoDB buffer pool size: 134217728 bytes. [] []
+[2024-07-01T18:49:18.657900+00:00] main.WARNING: Memory size allocated for the temporary table is more than 20% of innodb_buffer_pool_size. Please update innodb_buffer_pool_size or decrease batch size value (which decreases memory usages for the temporary table). Current batch size: 100000; Allocated memory size: 50000000 bytes; InnoDB buffer pool size: 134217728 bytes. [] []
+[2024-07-01T18:49:18.752814+00:00] main.WARNING: Memory size allocated for the temporary table is more than 20% of innodb_buffer_pool_size. Please update innodb_buffer_pool_size or decrease batch size value (which decreases memory usages for the temporary table). Current batch size: 100000; Allocated memory size: 50000000 bytes; InnoDB buffer pool size: 134217728 bytes. [] []
+[2024-07-01T18:49:27.918085+00:00] main.WARNING: Memory size allocated for the temporary table is more than 20% of innodb_buffer_pool_size. Please update innodb_buffer_pool_size or decrease batch size value (which decreases memory usages for the temporary table). Current batch size: 3334; Allocated memory size: 40008000 bytes; InnoDB buffer pool size: 134217728 bytes. [] []
+[2024-07-01T21:19:23.471985+00:00] main.INFO: Source table payment_services_order_status_data_production_submitted_hash does not exist. Skipping data migration... [] []
+[2024-07-01T21:20:16.123503+00:00] main.ERROR: Sample Data error: Warning: file_get_contents(/var/www/html/pub/media/downloadable/files/links/l/u/luma_background_-_model_against_fence_4_sec_.mp4): Failed to open stream: No such file or directory in /var/www/html/vendor/magento/module-downloadable-sample-data/Model/Product/Converter.php on line 132 [] []
+[2024-07-01T21:22:27.122544+00:00] main.WARNING: Memory size allocated for the temporary table is more than 20% of innodb_buffer_pool_size. Please update innodb_buffer_pool_size or decrease batch size value (which decreases memory usages for the temporary table). Current batch size: 100000; Allocated memory size: 50000000 bytes; InnoDB buffer pool size: 134217728 bytes. [] []
+[2024-07-01T21:22:27.204762+00:00] main.WARNING: Memory size allocated for the temporary table is more than 20% of innodb_buffer_pool_size. Please update innodb_buffer_pool_size or decrease batch size value (which decreases memory usages for the temporary table). Current batch size: 100000; Allocated memory size: 50000000 bytes; InnoDB buffer pool size: 134217728 bytes. [] []
+[2024-07-01T21:22:27.331378+00:00] main.WARNING: Memory size allocated for the temporary table is more than 20% of innodb_buffer_pool_size. Please update innodb_buffer_pool_size or decrease batch size value (which decreases memory usages for the temporary table). Current batch size: 100000; Allocated memory size: 50000000 bytes; InnoDB buffer pool size: 134217728 bytes. [] []
+[2024-07-01T21:22:27.591592+00:00] main.WARNING: Memory size allocated for the temporary table is more than 20% of innodb_buffer_pool_size. Please update innodb_buffer_pool_size or decrease batch size value (which decreases memory usages for the temporary table). Current batch size: 100000; Allocated memory size: 50000000 bytes; InnoDB buffer pool size: 134217728 bytes. [] []
+[2024-07-01T21:22:27.695460+00:00] main.WARNING: Memory size allocated for the temporary table is more than 20% of innodb_buffer_pool_size. Please update innodb_buffer_pool_size or decrease batch size value (which decreases memory usages for the temporary table). Current batch size: 100000; Allocated memory size: 50000000 bytes; InnoDB buffer pool size: 134217728 bytes. [] []
+[2024-07-01T21:22:27.800453+00:00] main.WARNING: Memory size allocated for the temporary table is more than 20% of innodb_buffer_pool_size. Please update innodb_buffer_pool_size or decrease batch size value (which decreases memory usages for the temporary table). Current batch size: 100000; Allocated memory size: 50000000 bytes; InnoDB buffer pool size: 134217728 bytes. [] []
+[2024-07-01T21:22:37.452413+00:00] main.WARNING: Memory size allocated for the temporary table is more than 20% of innodb_buffer_pool_size. Please update innodb_buffer_pool_size or decrease batch size value (which decreases memory usages for the temporary table). Current batch size: 3334; Allocated memory size: 40008000 bytes; InnoDB buffer pool size: 134217728 bytes. [] []

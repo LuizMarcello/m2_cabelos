@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<!--O arquivo "config.xml" passa informações padrões de um módulo para o magento.-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <carriers>
+            <abraaomarques_correios>
+                <active>0</active>
+                <name>Correios</name>
+                <title>Correios</title>
+                <default_weight>1</default_weight>
+                <default_height>2</default_height>
+                <default_width>16</default_width>
+                <default_length>16</default_length>
+                <webservice_url>http://ws.correios.com.br/calculador/CalcPrecoPrazo.aspx?StrRetorno=xml</webservice_url>
+                <view_product_page>0</view_product_page>
+                <model>AbraaoMarques\Correios\Model\Carrier\Shipping</model>
+                <sallowspecific>0</sallowspecific>
+                <specificerrmsg>This shipping method is not available. To use this shipping method, please contact us.
+                </specificerrmsg>
+                <handling_type>F</handling_type>
+            </abraaomarques_correios>
+        </carriers>
+    </default>
+</config>
+

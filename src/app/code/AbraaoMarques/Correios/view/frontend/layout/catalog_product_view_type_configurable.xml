@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="AbraaoMarques_Correios::css/style.css"/>
+    </head>
+    <body>
+        <referenceBlock name="product.info.options.wrapper.bottom">
+            <block class="Magento\Framework\View\Element\Template"
+                   name="abraaomarques.correios.product"
+                   template="AbraaoMarques_Correios::product.phtml"
+                   after="product.info.addtocart"
+                   ifconfig="carriers/abraaomarques_correios/view_product_page"
+            />
+
+        </referenceBlock>
+    </body>
+</page>

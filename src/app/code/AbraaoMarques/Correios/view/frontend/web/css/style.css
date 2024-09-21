@@ -1,0 +1,11 @@
+.quotation input {
+    width: 30%;
+}
+
+.quotation small {
+    display: none;
+}
+
+.display-quotation span {
+    display: block;
+}

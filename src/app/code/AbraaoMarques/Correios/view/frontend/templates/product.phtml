@@ -1,0 +1,55 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// phpcs:disable Magento2.Templates.ThisInTemplate.FoundThis
+
+/**
+ * Product view template
+ *
+ * @var $block \Magento\Catalog\Block\Product\View
+ */
+/*Para ter acesso a todos os dados do produto*/
+$_product = $block->getProduct();
+//var_dump($_product->getSku());
+?>
+
+<div class="quotation">
+    <div class="fieldset">
+        <div class="field">
+            <label for="zipcode" class="label"><?= __('Enter ZipCode') ?></label>
+            <div class="control">
+                <input type="text" name="zipcode" id="zipcode" placeholder="12345-678" class="input-text" value=""/>
+                <!--Estas tags php no "value", estão injetando nestes "inputs", os valores das medidas que foram
+                    lidas dos produtos, na página dos produtos, que veêm da variável "$_product" acima.-->
+                <input type="hidden" name="weight" id="weight" class="input-text"
+                       value="<?= (float)$_product->getWeight(); ?>"/>
+                <input type="hidden" name="width" id="width" class="input-text"
+                       value="<?= (float)$_product->getWidth(); ?>"/>
+                <input type="hidden" name="height" id="height" class="input-text"
+                       value="<?= (float)$_product->getHeight(); ?>"/>
+                <input type="hidden" name="length" id="length" class="input-text"
+                       value="<?= (float)$_product->getLength(); ?>"/>
+                <small><?= __('Searching...') ?></small>
+            </div>
+        </div>
+        <div class="display-quotation">
+
+        </div>
+    </div>
+</div>
+<!--O magento tem seu proprio framework javascript-->
+<script type="text/x-magento-init">
+    {
+        "#zipcode" : {
+            "AbraaoMarques_Correios/js/script": {}
+        }
+    }
+</script>
+
+
+
+
+
